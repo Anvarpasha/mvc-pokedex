@@ -22,6 +22,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     buildTypes {
@@ -53,6 +54,9 @@ dependencies {
 
     // Coroutines
     implementation(libs.coroutines.android)
+
+    // Okhttp
+    implementation(libs.okhttp)
 
     // Coil
     implementation(libs.coil)
