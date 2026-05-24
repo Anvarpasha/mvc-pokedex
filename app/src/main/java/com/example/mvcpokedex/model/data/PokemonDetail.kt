@@ -23,6 +23,7 @@ data class TypeInfo(
 )
 
 data class StatSlot(
+    @SerializedName("base_stat")
     val baseStat: Int,
     val stat: StatInfo
 )
@@ -42,5 +43,6 @@ data class OtherSprites(
 )
 
 data class OfficialArtwork(
+    @SerializedName("front_default")
     val frontDefault: String
 )
