@@ -24,7 +24,7 @@ class PokemonRepository {
         } catch (e: Exception){
             val networkError = NetworkErrorMapper.map(e)
             Log.e(TAG, "Failed to fetch pokemon list — ${networkError.message}")
-            Result.failure(e)
+            Result.failure(networkError)
         }
     }
 
@@ -38,7 +38,7 @@ class PokemonRepository {
         }catch (e: Exception){
             val networkError = NetworkErrorMapper.map(e)
             Log.e(TAG, "Failed to fetch pokemon detail — ${networkError.message}")
-            Result.failure(e)
+            Result.failure(networkError)
         }
     }
 }
