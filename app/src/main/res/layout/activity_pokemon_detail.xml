@@ -34,15 +34,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- Pokemon Image -->
+        <!-- Pokemon Image — TOP of the screen -->
         <ImageView
             android:id="@+id/ivPokemon"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:contentDescription="Pokemon image"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvStats" />
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <!-- Pokemon Name -->
         <TextView
@@ -75,8 +75,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:gravity="center"
             android:layout_marginTop="16dp"
-            android:gravity="center">
+            app:layout_constraintTop_toBottomOf="@id/tvId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
                 android:id="@+id/tvHeight"
